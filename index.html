@@ -3,7 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>郁郁腸$298-60分鐘.</title>
+<title>郁郁腸$298-60分鐘</title>
+
+<!-- ✅ Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1626341595154437');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1626341595154437&ev=PageView&noscript=1"/>
+</noscript>
 
 <style>
 body {
@@ -13,16 +34,23 @@ body {
   color: #333;
 }
 
-/* 容器 */
 .container {
   padding: 20px;
   max-width: 500px;
   margin: auto;
 }
 
-/* 卡片 */
+img {
+  width: 100%;
+  display: block;
+}
+
+.top-rounded {
+  border-radius: 20px 20px 0 0;
+}
+
 .card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 20px;
   padding: 20px;
   margin-top: 20px;
@@ -30,7 +58,7 @@ body {
 }
 
 .title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -51,48 +79,22 @@ body {
   font-weight: bold;
 }
 
-/* 按鈕 */
 .button {
-  display: block;
   width: 100%;
   padding: 15px;
   border-radius: 14px;
   border: none;
   background: #25D366;
-  color: white;
+  color: #fff;
   font-size: 16px;
   font-weight: bold;
-  margin-top: 15px;
   cursor: pointer;
+  margin-top: 15px;
 }
 
-/* 移除所有 a 的藍線 */
 a {
   text-decoration: none;
   color: inherit;
-}
-a img {
-  border: none;
-  display: block;
-}
-
-/* 圖片 */
-img {
-  width: 100%;
-  display: block;
-  margin: 0;
-  border-radius: 0;
-}
-
-/* 圓角 */
-.top-rounded {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-.bottom-rounded {
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  margin-bottom: 20px;
 }
 </style>
 
@@ -102,7 +104,7 @@ img {
 
 <div class="container">
 
-  <!-- 頂部圖片 -->
+  <!-- 图片 -->
   <img src="banner.jpg" class="top-rounded">
   <img src="banner1.jpg">
   <img src="banner2.jpg">
@@ -110,51 +112,38 @@ img {
   <img src="banner4.jpg">
   <img src="banner5.jpg">
   <img src="banner6.jpg">
-  
-  </a>
 
-  <!-- 卡片 -->
+  <!-- 内容 -->
   <div class="card">
     <div class="title">✨套餐內容✨</div>
-    <p>🔥做60分鐘持續8小時</p>
-    <p>🫚金姜活力精油按背（從背暖到腹，深層放鬆）💆‍♀️</p>
-    <p>🌺腹部香氣儀式（中藥臍貼+按頭 雙倍舒服）</p>
-    <p>💫儀器溫熱導入（溫暖驅寒 腸胃舒緩）</p>
-    <p>💗這是一場從情緒到腸胃的深度療愈，實現身心同頻共振</p>
+    <p>🔥 60分鐘療程 · 持續放鬆8小時</p>
+    <p>🫚 金姜活力精油按背（暖身放鬆）</p>
+    <p>🌺 腹部香氣儀式（臍貼 + 按頭）</p>
+    <p>💫 溫熱儀器導入（驅寒舒緩）</p>
+    <p class="highlight">💗 身心同步放鬆 · 腸胃舒緩</p>
+  </div>
 
+  <!-- 价格 -->
   <div class="card">
-  <p class="price-old">原價 $1680</p>
+    <p class="price-old">$1680</p>
     <p class="price-new">$298</p>
     <p class="highlight">即刻預約您的腸胃放鬆日</p>
-  
+
     <div class="title">📝 立即領取優惠</div>
 
-    <!-- WhatsApp 按鈕（原位置） -->
-    <a href="https://wa.me/85251675936" target="_blank" rel="noopener noreferrer" id="whatsappBtn">
-      <button class="button">📱 立即領取優惠(WhatsApp)</button>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/85251675936" target="_blank" id="whatsappBtn">
+      <button class="button">📱 立即預約 (WhatsApp)</button>
     </a>
   </div>
 
 </div>
 
 <script>
-console.log("✅ 页面已加载完成");
-
-document.querySelectorAll("img").forEach((img, index) => {
-  img.addEventListener("load", () => {
-    console.log(`🖼️ 图片${index + 1}加载成功: ${img.src}`);
-  });
-  img.addEventListener("error", () => {
-    console.error(`❌ 图片${index + 1}加载失败: ${img.src}`);
-  });
+// 📲 WhatsApp点击 = Lead（核心赚钱事件）
+document.getElementById("whatsappBtn")?.addEventListener("click", function () {
+  fbq('track', 'Lead');
 });
-
-const btn = document.getElementById("whatsappBtn");
-if (btn) {
-  btn.addEventListener("click", () => {
-    console.log("📲 用户点击了 WhatsApp 按钮");
-  });
-}
 </script>
 
 </body>
