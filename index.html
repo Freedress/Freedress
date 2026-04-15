@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>郁郁腸$298-60分鐘</title>
 
-<!-- ✅ Meta Pixel -->
+<!-- ✅ Meta Pixel（标准+优化） -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,8 +17,16 @@ s.parentNode.insertBefore(t,s)}
 (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1626341595154437');
+
+// 🔹 页面基础事件
 fbq('track', 'PageView');
-fbq('track', 'ViewContent');
+
+// 🔹 内容浏览（帮助广告学习）
+fbq('track', 'ViewContent', {
+  content_name: '腸胃療程頁面',
+  value: 298,
+  currency: 'HKD'
+});
 </script>
 
 <noscript>
@@ -131,16 +139,33 @@ a {
 
     <div class="title">📝 立即領取優惠</div>
 
-    <!-- WhatsApp -->
-    <a href="https://wa.me/85251675936" target="_blank" id="whatsappBtn">
+    <!-- WhatsApp 按钮 -->
+    <a href="#" id="whatsappBtn">
       <button class="button">📱 立即預約 (WhatsApp)</button>
     </a>
   </div>
 
+</div>
+
 <script>
-// 📲 WhatsApp点击 = Lead（核心赚钱事件）
-document.getElementById("whatsappBtn")?.addEventListener("click", function () {
-  fbq('track', 'Lead');
+// 📲 WhatsApp点击 = 转化事件（最终版）
+document.getElementById("whatsappBtn")?.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // 🔹 中间行为（用于再营销）
+  fbq('track', 'AddToCart');
+
+  // 🔹 核心转化（真正广告优化用）
+  fbq('track', 'Lead', {
+    content_name: '腸胃療程298',
+    value: 298,
+    currency: 'HKD'
+  });
+
+  // 🔹 防丢数据（关键）
+  setTimeout(() => {
+    window.open("https://wa.me/85251675936", "_blank");
+  }, 300);
 });
 </script>
 
