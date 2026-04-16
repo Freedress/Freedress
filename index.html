@@ -5,33 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>郁郁腸$298-60分鐘</title>
 
-<!-- ✅ Meta Pixel（优化完整版） -->
+<!-- ✅ Meta Pixel（标准+优化） -->
 <script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1626341595154437');
 
-// 页面浏览
+// 🔹 页面基础事件
 fbq('track', 'PageView');
 
-// 内容浏览（帮助学习）
+// 🔹 内容浏览（帮助广告学习）
 fbq('track', 'ViewContent', {
   content_name: '腸胃療程頁面',
-  content_category: '美容/健康',
   value: 298,
   currency: 'HKD'
 });
 </script>
 
 <noscript>
-< img height="1" width="1" style="display:none"
+<img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1626341595154437&ev=PageView&noscript=1"/>
 </noscript>
 
@@ -42,18 +41,22 @@ body {
   background: #fff7ed;
   color: #333;
 }
+
 .container {
   padding: 20px;
   max-width: 500px;
   margin: auto;
 }
+
 img {
   width: 100%;
   display: block;
 }
+
 .top-rounded {
   border-radius: 20px 20px 0 0;
 }
+
 .card {
   background: #fff;
   border-radius: 20px;
@@ -61,24 +64,29 @@ img {
   margin-top: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
+
 .title {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 .price-old {
   text-decoration: line-through;
   opacity: 0.6;
 }
+
 .price-new {
   font-size: 32px;
   font-weight: bold;
   color: #e11d48;
 }
+
 .highlight {
   color: #f59e0b;
   font-weight: bold;
 }
+
 .button {
   width: 100%;
   padding: 15px;
@@ -91,11 +99,13 @@ img {
   cursor: pointer;
   margin-top: 15px;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
 </style>
+
 </head>
 
 <body>
@@ -103,66 +113,59 @@ a {
 <div class="container">
 
   <!-- 图片 -->
-  < img src="banner.jpg" class="top-rounded">
-  < img src="banner1.jpg">
-  < img src="banner2.jpg">
-  < img src="banner3.jpg">
-  < img src="banner4.jpg">
-  < img src="banner5.jpg">
-  < img src="banner6.jpg">
+  <img src="banner.jpg" class="top-rounded">
+  <img src="banner1.jpg">
+  <img src="banner2.jpg">
+  <img src="banner3.jpg">
+  <img src="banner4.jpg">
+  <img src="banner5.jpg">
+  <img src="banner6.jpg">
 
   <!-- 内容 -->
   <div class="card">
     <div class="title">✨套餐內容✨</div>
-    <p>🔥 60分鐘療程 · 持續放鬆8小時</p >
-    <p>🫚 金姜活力精油按背（暖身放鬆）</p >
-    <p>🌺 腹部香氣儀式（臍貼 + 按頭）</p >
-    <p>💫 溫熱儀器導入（驅寒舒緩）</p >
-    <p class="highlight">💗 身心同步放鬆 · 腸胃舒緩</p >
+    <p>🔥 60分鐘療程 · 持續放鬆8小時</p>
+    <p>🫚 金姜活力精油按背（暖身放鬆）</p>
+    <p>🌺 腹部香氣儀式（臍貼 + 按頭）</p>
+    <p>💫 溫熱儀器導入（驅寒舒緩）</p>
+    <p class="highlight">💗 身心同步放鬆 · 腸胃舒緩</p>
   </div>
 
   <!-- 价格 -->
   <div class="card">
-    <p class="price-old">$1680</p >
-    <p class="price-new">$298</p >
-    <p class="highlight">即刻預約您的腸胃放鬆日</p >
+    <p class="price-old">$1680</p>
+    <p class="price-new">$298</p>
+    <p class="highlight">即刻預約您的腸胃放鬆日</p>
 
     <div class="title">📝 立即領取優惠</div>
 
-    <!-- ✅ WhatsApp 按钮 -->
-    <a href=" " id="whatsappBtn" target="_blank">
+    <!-- WhatsApp 按钮 -->
+    <a href="#" id="whatsappBtn">
       <button class="button">📱 立即預約 (WhatsApp)</button>
-    </a >
+    </a>
   </div>
 
 </div>
 
 <script>
-// 🔥 WhatsApp点击 = 真正转化（优化完整版）
-document.getElementById("whatsappBtn").addEventListener("click", function (e) {
-
+// 📲 WhatsApp点击 = 转化事件（最终版）
+document.getElementById("whatsappBtn")?.addEventListener("click", function (e) {
   e.preventDefault();
 
-  // 生成唯一事件ID（防止丢失/重复）
-  const eventID = 'lead_' + Date.now();
+  // 🔹 中间行为（用于再营销）
+  fbq('track', 'AddToCart');
 
-  // 中间行为（帮助学习）
-  fbq('track', 'AddToCart', {}, {eventID: eventID});
-
-  // ✅ 核心：Lead转化（广告优化用）
+  // 🔹 核心转化（真正广告优化用）
   fbq('track', 'Lead', {
     content_name: '腸胃療程298',
-    content_category: '美容/健康',
     value: 298,
-    currency: 'HKD',
-    button_location: 'main_cta',
-    source_page: window.location.href
-  }, {eventID: eventID});
+    currency: 'HKD'
+  });
 
-  // ⏱️ 延迟跳转（确保数据发出）
+  // 🔹 防丢数据（关键）
   setTimeout(() => {
     window.open("https://wa.me/85251675936", "_blank");
-  }, 500);
+  }, 300);
 });
 </script>
 
